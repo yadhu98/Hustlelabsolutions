@@ -28,12 +28,13 @@ jobs:
     # Step 4: Install Firebase CLI
     - name: Install Firebase CLI
       run: |
-        npm install -g firebase-tools
+        sudo npm install -g firebase-tools
 
     # Step 5: Deploy to Firebase
     - name: Deploy to Firebase
       env:
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
       run: |
-        firebase use --add # Use this to select the Firebase project if needed
+        firebase --version # Check if the Firebase CLI is installed successfully
+        firebase use --add  # Optional: Use this to select your Firebase project if needed
         firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
