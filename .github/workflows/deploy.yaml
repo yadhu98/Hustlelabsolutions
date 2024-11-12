@@ -3,47 +3,35 @@ name: Deploy to Firebase
 on:
   push:
     branches:
-      - main  # or your target branch
+      - main  # or the branch you are deploying from
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  deploy:
+    runs-on: ubuntu-latest  # or other OS if needed
 
     steps:
-    # Step 1: Checkout code
+    # Checkout code
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v2
 
-    # Step 2: Set up Node.js
+    # Set up Node.js environment
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '16'  # Ensure to set the right Node.js version
+        node-version: '16'  # Choose your preferred node version
 
-    # Step 3: Install dependencies
+    # Install project dependencies
     - name: Install dependencies
-      run: |
-        npm ci
+      run: npm install
 
-    # Step 4: Install Firebase CLI globally
+    # Install Firebase CLI globally
     - name: Install Firebase CLI
-      run: |
-        npm install -g firebase-tools
+      run: npm install -g firebase-tools  # Ensures firebase tools are installed in CI
 
-    # Step 5: Verify Firebase CLI Installation
-    - name: Check Firebase CLI version
-      run: |
-        firebase --version  # This will output the Firebase CLI version if installed correctly
+    # Authenticate Firebase using the Firebase token (make sure this is set in GitHub secrets)
+    - name: Firebase Authentication
+      run: firebase use --add
 
-    # Step 6: Authenticate and Deploy to Firebase
+    # Deploy to Firebase
     - name: Deploy to Firebase
-      env:
-        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}  # Ensure FIREBASE_TOKEN is set in GitHub Secrets
-      run: |
-        firebase --version  # Check again to ensure it's available
-        firebase use --add  # Ensure you select the Firebase project
-        firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}  # Deploy to Firebase
-    - name: Check Node and npm versions
-  run: |
-    node --version
-    npm --version
+      run: firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}

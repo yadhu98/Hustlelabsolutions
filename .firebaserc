@@ -1,5 +1,9 @@
 {
   "projects": {
-    "default": "hustlelab01"
-  }
+    "default": "hustlelabsolutionsindia",
+    "s": "hustlelabsolutionsindia",
+    "staging": "hustlelabsolutionsindia"
+  },
+  "targets": {},
+  "etags": {}
 }
