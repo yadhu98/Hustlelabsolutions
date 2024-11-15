@@ -545,16 +545,96 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .contact h2 {
 	font-size: 45px;
 	font-weight: 700;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
+}
+
+.contact form input, .contact form textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  color: #fff;
+  /* margin: 0 0 8px 0; */
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  transition: 0.3s ease-in-out;
+}
+
+/* Style the select container */
+.custom-select {
+  width: 100%;
+  padding: 10px;
+  outline: none !important;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  appearance: none; /* Remove default arrow */
+  -webkit-appearance: none; /* Safari */
+  -moz-appearance: none; /* Firefox */
+  background-repeat: no-repeat;
+  background-position: right 10px top 50%;
+  appearance: none;         /* Removes default arrow in most browsers */
+  -webkit-appearance: none; /* Safari */
+  -moz-appearance: none;    /* Firefox */
+}
+
+/* Custom dropdown arrow */
+
+
+.custom-select:focus {
+  outline: none;
+}
+
+/* Style individual options (if needed) */
+.custom-select option {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 10px;
+}
+
+
+.contact-input-things{
+  padding: 18px 26px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.contact .accordion-hustle{
+  border:  none;
+  margin-top: 5%;
+  --bs-accordion-active-bg : none;
+  --bs-accordion-btn-bg : none;
+}
+.contact .accordion-hustle .accordion-item{
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 20px;
+  color: #fff;
+  margin: 0 0 18px 0;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  transition: 0.3s ease-in-out;
+}
+
+.accordion-button{
+  color: white !important;
+}
+
+.accordion-button::after{
+  display: none;
+}
+.accordion-button:not(.collapsed){
+  color: white !important;
 }
 .contact form input, .contact form textarea {
   width: 100%;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 20px;
+  border-radius: 10px;
   color: #fff;
   margin: 0 0 8px 0;
-  padding: 18px 26px;
+  padding: 5px 26px;
   font-weight: 500;
   font-size: 18px;
   letter-spacing: 0.8px;
@@ -573,25 +653,25 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #121212;
   opacity: 0.8;
 }
-.contact form button {
+.hustlebutton {
   font-weight: 700;
   color: #000;
   background-color: #fff;
-  padding: 14px 48px;
+  padding: 10px 48px;
   font-size: 18px;
-  margin-top: 25px;
-  border-radius: 0;
+  margin-top: 20px;
+  border-radius: 10px;
   position: relative;
   transition: 0.3s ease-in-out;
 }
-.contact form button span {
+.hustlebutton span {
   z-index: 1;
   position: relative;
 }
-.contact form button:hover {
+.hustlebutton:hover {
   color: #fff;
 }
-.contact form button::before {
+.hustlebutton::before {
   content: "";
   background: #121212;
   width: 0;
@@ -602,9 +682,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: 0;
   transition: 0.3s ease-in-out;
 }
-.contact form button:hover::before {
+.hustlebutton:hover::before {
   width: 100%;
-}
+} */
 
 /************ Footer Css ************/
 .footer {

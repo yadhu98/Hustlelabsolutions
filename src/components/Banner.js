@@ -6,19 +6,19 @@ import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 export const Banner = () => {
-  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  // const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true); // Track visibility state
   const [animationClass, setAnimationClass] = useState(""); // Animation class state
 
   const toRotate = [
-    "Web Development", 
-    "Videography & Photography", 
-    "Influencer Marketing", 
-    "Ad Campaign", 
-    "Content Creation", 
+    "Web Development",
+    "Videography & Photography",
+    "Influencer Marketing",
+    "Ad Campaign",
+    "Content Creation",
     "Social Media Marketing"
   ];
-  
+
   const delay = 3000;  // Time between switching to the next item
 
   useEffect(() => {
@@ -28,16 +28,16 @@ export const Banner = () => {
     if (isVisible) {
       setAnimationClass("animate__animated animate__fadeIn");
       interval = setInterval(() => {
-        setCurrentTextIndex(prevIndex => (prevIndex + 1) % toRotate.length);
+        // setCurrentTextIndex(prevIndex => (prevIndex + 1) % toRotate.length);
       }, delay);
     } else {
       // Reset text rotation index and animation class when not in view
-      setCurrentTextIndex(0);
+      // setCurrentTextIndex(0);
       setAnimationClass("");
     }
 
     return () => clearInterval(interval); // Clean up interval on component unmount or visibility change
-  }, [isVisible,toRotate.length]);
+  }, [isVisible, toRotate.length]);
 
   return (
     <section className="banner" id="home">
@@ -51,20 +51,38 @@ export const Banner = () => {
               {() => (
                 <div className={animationClass}>
                   <span className="tagline">Welcome to Hustle Lab</span>
-                  <h1>
-                    <span>At Hustle Labs we do</span>{" "}<br />
-                    <span className="txt-rotate">
-                      <span className="wrap">
-                        {toRotate[currentTextIndex]}
+                  <div style={{ display: 'flex', flexDirection: 'column' }}>
+                    <span style={{ fontSize: '3.5rem', fontWeight: 400, color: 'white',lineHeight : '50px' }}>
+                      {/* <span>At Hustle Labs we do</span>{" "}<br /> */}
+                      {/* <span className="txt-rotate"> */}
+                      {/* <span className="wrap"> */}
+                      {/* {toRotate[currentTextIndex]} */}
+
+                      {/* </span> */}
+                      {/* </span> */}
+                      <span style={{ color: '#7C67BD' }}>
+                        Innovations
+                      </span>{' '}
+                      in every click
+                    </span>
+                    <span style={{ fontSize: '3.5rem', fontWeight: 400, color: 'white' }}>
+                      <span style={{ color: '#d63384' }}>
+                        Results
+                      </span>
+                      <span >{' '}
+                        in every step !
                       </span>
                     </span>
-                  </h1>
+
+                  </div>
                   <p>
-                    At Hustle Labs, we believe in keeping things simple: Less Meetings, More Results. That’s why we’ve crafted three powerful offers: 
-                    <span style={{ color: '#DE6EA' }}> Simple Strategy, Automated Growth, and Fast Content—built</span> 
+                    At Hustle Labs, we believe in keeping things simple: Less Meetings, More Results. That’s why we’ve crafted three powerful offers:
+                    <span style={{ color: '#DE6EA' }}> Simple Strategy, Automated Growth, and Fast Content—built </span>
                     to streamline your marketing, maximize impact, and fuel your growth without the fuss.
                   </p>
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                  <a href="#connect" style={{ textDecoration: 'none' }}>
+                    <button>Let’s Connect <ArrowRightCircle size={25} /></button>
+                  </a>
                 </div>
               )}
             </TrackVisibility>
