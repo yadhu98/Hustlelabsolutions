@@ -36,11 +36,11 @@ const ContactForm = () => {
     const customStyles = {
         placeholder: (base) => ({
             ...base,
-            color: 'white', // Custom placeholder color
+            color: 'white', 
           }),
           singleValue: (base) => ({
             ...base,
-            color: 'white', // Color of selected option text
+            color: 'white', 
           }),
         control: (base) => ({
             ...base,
