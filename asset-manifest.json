@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Hustlelabsolutions/static/css/main.dfe39427.css",
-    "main.js": "/Hustlelabsolutions/static/js/main.11d98143.js",
+    "main.css": "/Hustlelabsolutions/static/css/main.d6e3199c.css",
+    "main.js": "/Hustlelabsolutions/static/js/main.fe9d2040.js",
     "static/js/453.298f5782.chunk.js": "/Hustlelabsolutions/static/js/453.298f5782.chunk.js",
     "static/media/color-sharp.png": "/Hustlelabsolutions/static/media/color-sharp.bea361cfef80fefc2d1e.png",
     "static/media/color-sharp2.png": "/Hustlelabsolutions/static/media/color-sharp2.c87586c6c2f549cb4aa6.png",
@@ -26,12 +26,12 @@
     "index.html": "/Hustlelabsolutions/index.html",
     "static/media/nav-icon1.svg": "/Hustlelabsolutions/static/media/nav-icon1.721d5414c26365f117e71d46b6641cb2.svg",
     "static/media/nav-icon2.svg": "/Hustlelabsolutions/static/media/nav-icon2.178f497aa17b70c42df2a1a8c926ed01.svg",
-    "main.dfe39427.css.map": "/Hustlelabsolutions/static/css/main.dfe39427.css.map",
-    "main.11d98143.js.map": "/Hustlelabsolutions/static/js/main.11d98143.js.map",
+    "main.d6e3199c.css.map": "/Hustlelabsolutions/static/css/main.d6e3199c.css.map",
+    "main.fe9d2040.js.map": "/Hustlelabsolutions/static/js/main.fe9d2040.js.map",
     "453.298f5782.chunk.js.map": "/Hustlelabsolutions/static/js/453.298f5782.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dfe39427.css",
-    "static/js/main.11d98143.js"
+    "static/css/main.d6e3199c.css",
+    "static/js/main.fe9d2040.js"
   ]
 }
