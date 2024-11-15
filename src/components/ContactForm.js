@@ -125,7 +125,7 @@ const ContactForm = () => {
                             options={options}
                             styles={customStyles}
                             components={{DropdownIndicator}}
-                            placeholder="Select an option"
+                            placeholder="Where did you hear about us"
                         />
                     </Col>
                     {
